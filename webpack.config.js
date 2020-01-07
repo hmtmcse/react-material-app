@@ -48,7 +48,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: '...::: Grails 786 :::...',
+            title: '...::: Grails Engine :::...',
             chunksSortMode: 'none',
             template: './index.html',
             minify: true
