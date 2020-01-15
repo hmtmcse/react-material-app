@@ -15,26 +15,29 @@ const Component = React.lazy(() => import('react-mui-ui/ui/tr-ui-demo'));
 
 export default class URLMapping extends TRURLMapping {
 
-    public getLayoutsAndPages(): Array<TRLayoutInfoData> {
-        let pageWithLayout: Array<TRLayoutInfoData> = [];
 
+    public getPublicLayouts() : TRLayoutInfoData{
         let publicLayoutInfo: TRLayoutInfoData = new TRLayoutInfoData();
         publicLayoutInfo.layout = PublicLayout;
         publicLayoutInfo.addPageInstance("/", LoginView);
         publicLayoutInfo.addPageInstance("/forgot-password", ForgotPasswordView);
         publicLayoutInfo.addPageInstance("/component", Component);
-        pageWithLayout.push(publicLayoutInfo);
+        return publicLayoutInfo;
+    }
 
+    public getPrivateLayouts() : TRLayoutInfoData{
+        let privateLayoutInfo: TRLayoutInfoData = new TRLayoutInfoData();
+        privateLayoutInfo = new TRLayoutInfoData();
+        privateLayoutInfo.layout = PrivateLayout;
+        privateLayoutInfo.addPageInstance("/dashboard", Dashboard);
+        privateLayoutInfo = UserUrlMapping.privateUrlMappings(privateLayoutInfo);
+        return privateLayoutInfo;
+    }
 
-        publicLayoutInfo = new TRLayoutInfoData();
-        publicLayoutInfo.layout = PrivateLayout;
-        publicLayoutInfo.addPageInstance("/dashboard", Dashboard);
-
-
-        publicLayoutInfo = UserUrlMapping.privateUrlMappings(publicLayoutInfo);
-        pageWithLayout.push(publicLayoutInfo);
-
-
+    public getLayoutsAndPages(): Array<TRLayoutInfoData> {
+        let pageWithLayout: Array<TRLayoutInfoData> = [];
+        pageWithLayout.push(this.getPublicLayouts());
+        pageWithLayout.push(this.getPrivateLayouts());
         return pageWithLayout
     }
 
