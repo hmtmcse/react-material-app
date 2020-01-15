@@ -5,6 +5,7 @@ import React from "react";
 
 class State implements TRState {
     message: any = [];
+    index: any = 1;
     websocketHolder?: WebSocket
 }
 
@@ -15,7 +16,6 @@ interface Props extends TRProps {
 export default class WebSocketView extends TRReactComponent<Props, State> {
 
     state: State = new State();
-    websocket = new WebSocket("ddd");
 
 
     componentDidMount() {
@@ -29,16 +29,18 @@ export default class WebSocketView extends TRReactComponent<Props, State> {
     }
 
     appendText(text: string) {
-        this.state.message.push(text);
+        this.state.message.push(<div key={this.state.index}>{text}</div>);
+        this.state.index ++;
         this.setState({
-            message: this.state.message
+            message: this.state.message,
+            index: this.state.index,
         })
     }
 
     render() {
         const {} = this.props;
         return (<React.Fragment>
-            <span>{this.state.message}</span>
+            {this.state.message}
         </React.Fragment>);
     }
 }
