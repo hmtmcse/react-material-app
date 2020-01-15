@@ -17,12 +17,12 @@ import TRTableHeader from "react-mui-ui/ui/tr-table-header";
 import {Align, TRTableActionData, TRTableActionDataHelper, TRTableHeaderDataHelper} from "react-mui-ui/ui/tr-ui-data";
 import {TrUtil} from "tm-react/src/artifacts/util/tr-util";
 import TRPagination from "react-mui-ui/ui/tr-pagination";
-import {ApiUtil} from "core-app/src/system/api-util";
-import SystemConfig from "core-app/src/system/system-config";
+import {ApiUtil} from "react-material-app/src/system/api-util";
+import SystemConfig from "react-material-app/src/system/system-config";
 import PackageUrlMapping from "./package-url-mapping";
 import {viewCommon} from "bl-ui-crm/src/assets/style-jss";
-import CaTableAction from "core-app/src/override/ca-table-action";
-import {AppConstant} from "core-app/src/system/app-constant";
+import CaTableAction from "react-material-app/src/override/ca-table-action";
+import {AppConstant} from "react-material-app/src/system/app-constant";
 
 
 

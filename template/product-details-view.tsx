@@ -16,9 +16,9 @@ import {
 } from "react-mui-ui/ui/ui-component";
 import KeyValueTableRow from "bl-ui-common/src/view/common/key-value-table-row";
 import {TrUtil} from "tm-react/src/artifacts/util/tr-util";
-import {ApiUtil} from "core-app/src/system/api-util";
+import {ApiUtil} from "react-material-app/src/system/api-util";
 import TRHTTResponse from "tm-react/src/artifacts/processor/http/tr-http-response";
-import {AppConstant} from "core-app/src/system/app-constant";
+import {AppConstant} from "react-material-app/src/system/app-constant";
 import ProductUrlMapping from "./product-url-mapping";
 
 interface Props extends TRProps {

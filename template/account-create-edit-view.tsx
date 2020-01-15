@@ -4,8 +4,8 @@ import TRComponentState from "tm-react/src/artifacts/component/tr-component-stat
 import TRComponent from "tm-react/src/artifacts/component/tr-component";
 import AccountUrlMapping from "../accounts/account-url-mapping";
 import TRHTTResponse from "tm-react/src/artifacts/processor/http/tr-http-response";
-import {ApiUtil} from "core-app/src/system/api-util";
-import {AppConstant} from "core-app/src/system/app-constant";
+import {ApiUtil} from "react-material-app/src/system/api-util";
+import {AppConstant} from "react-material-app/src/system/app-constant";
 import {
     Button,
     Card,
@@ -19,7 +19,7 @@ import {
 import TRReactSelect from "react-mui-ui/ui/tr-react-select";
 import {CommonData} from "bl-ui-common/src/data/common-data";
 import {TrUtil} from "tm-react/src/artifacts/util/tr-util";
-import UserUrlMapping from "core-app/src/view/user/user-url-mapping";
+import UserUrlMapping from "react-material-app/src/view/user/user-url-mapping";
 
 
 interface Props extends TRProps {
