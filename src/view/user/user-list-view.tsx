@@ -14,7 +14,7 @@ import {
     Typography,
     withStyles
 } from "react-mui-ui/ui/ui-component";
-import {viewCommon} from "../../assets/style-jss";
+import {viewCommon} from "react-material-app/src/assets/style-jss";
 import TRTableHeader, {SortDirection} from "react-mui-ui/ui/tr-table-header";
 import {Align, TRTableActionData, TRTableActionDataHelper, TRTableHeaderDataHelper} from "react-mui-ui/ui/tr-ui-data";
 import {TrUtil} from "tm-react/src/artifacts/util/tr-util";

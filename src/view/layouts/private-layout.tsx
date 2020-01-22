@@ -2,7 +2,7 @@ import React from 'react';
 import TRReactComponent from "tm-react/src/artifacts/framework/tr-react-component";
 import TRLayoutRenderer from "tm-react/src/artifacts/component/tr-layout-rander";
 import {withStyles} from "react-mui-ui/ui/ui-component";
-import {privateLayoutJSS} from "../../assets/style-jss";
+import {privateLayoutJSS} from "react-material-app/src/assets/style-jss";
 import {AppConstant} from "../../system/app-constant";
 import AppNavigation from "../../system/app-navigation";
 import NavigationBar from "../nav/navigation-bar";
